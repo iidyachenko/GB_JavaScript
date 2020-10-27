@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ex1</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), 
+            где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от 
+            переданного значения операции (использовать switch) выполнить одну из арифметических операций 
+            (использовать функции из задания 4) и вернуть полученное значение. 
+        */
+        "use strict";
+
+        function mySum(a, b) {
+            return a + b;
+        }
+
+        function myDiff(a, b) {
+            return a - b;
+        }
+
+        function myDiv(a, b) {
+            return a / b;
+        }
+
+        function myMult(a, b) {
+            return a * b;
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "+":
+                    alert("Сумма равна: " + mySum(arg1, arg2));
+                    break;
+                case "-":
+                    alert("Разница равна: " + myDiff(arg1, arg2));
+                    break;
+                case "/":
+                    alert("Деление равно: " + myDiv(arg1, arg2));
+                    break;
+                case "*":
+                    alert("Произвдение равно: " + myMult(arg1, arg2));
+                    break;
+                default:
+                    alert("Незвестный операнд");
+            }
+
+        }
+
+        let a = +prompt("Введите первое число: "); // + добавил для преобразования в число
+        let b = +prompt("Введите второе число: "); // + добавил для преобразования в число
+        let operation = prompt("Введите символ операции (+, -, /, *): ");
+
+        mathOperation(a, b, operation)
+
+
+    </script>
+</body>
+
+</html>
