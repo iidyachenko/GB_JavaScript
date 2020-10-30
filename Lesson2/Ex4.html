@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ex1</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя
+            параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их
+            и возвращать результат.
+            Обязательно использовать оператор return.
+        */
+        "use strict";
+
+        function mySum(a, b) {
+            return a + b;
+        }
+
+        function myDiff(a, b) {
+            return a - b;
+        }
+
+        function myDiv(a, b) {
+            return a / b;
+        }
+
+        function myMult(a, b) {
+            return a * b;
+        }
+
+        let a = +prompt("Введите первое число: "); // + добавил для преобразования в число
+        let b = +prompt("Введите второе число: "); // + добавил для преобразования в число
+        alert("Сумма равна: " + mySum(a, b));
+        alert("Разница равна: " + myDiff(a, b));
+        alert("Деление равно: " + myDiv(a, b));
+        alert("Произвдение равно: " + myMult(a, b));
+    </script>
+</body>
+
+</html>
